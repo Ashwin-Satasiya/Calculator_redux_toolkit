@@ -8,7 +8,8 @@ const calcSlice = createSlice({
       return (state = "");
     },
     backspace: (state, action) => {
-      return state.slice(0, -1);
+      const stringState = String(state);
+      return stringState.slice(0, -1);
     },
     devide: (state, action) => {
       return (state += "/");
